@@ -1,0 +1,873 @@
+:root {
+  --circle-position-top: -95%;
+  --circle-position-left: -25%;
+}
+body {
+  background: #f2f4f8;
+  display: flex;
+  /*justify-content: space-around;*/
+  /*align-items: center;*/
+  flex-wrap: wrap;
+  height: 100vh;
+  font-family: "Open Sans";
+  margin: 0;
+}
+h1, h2, h3, h4 {
+  font-family:"Segoe UI SYmbol";
+}
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 5px;
+}
+p {
+  font-family:"Candara";
+}
+
+a.tabInnerButton{
+  font-family:"Candara";
+  color: black;
+  text-decoration: none;
+}
+.PageTitle{
+  position: relative;
+  float: left;
+  color: White;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+#restOfHeader {
+  width: 100%;
+  position: relative;
+}
+#headerLogo {
+  position: relative;
+  float: left;
+  z-index: 2;
+}
+
+#searchBoxSpan {
+
+  width: :100%;
+  background-color:black;
+  font-family:"Candara";
+  z-index: 0;
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+#searchBox {
+  float:right;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+#advancedSearchLink {
+  color: white;
+  float:right;
+  margin-top:55px;
+  margin-right:10px;"
+}
+.advancedSearchForm *{
+  text-align: right;
+  font-size: 1.1em;
+  font-family: "Candara";
+}
+.advancedSearchForm input, .advancedSearchForm select, .advancedSearchForm textarea{
+  width: 100%;
+}
+.advancedSearchForm label{
+  width: 100%;
+  float: left;
+  margin-right: 20px;
+}
+.advancedSearchForm *:focus{
+  background-color: lightgrey;
+}
+
+.form-reveal-if-active.slave, .form-reveal-if-valid.slave {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+
+  width:0;
+}
+input:valid.form-reveal-if-active.master, input:valid.form-reveal-if-valid.master {
+  width:48%;
+  opacity: 1;
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
+  transition: 0.5s;
+  float: left;
+  background-color: blue;
+}
+
+.advancedSearchForm td:first-child{
+  width: 30%;
+}
+
+input:valid ~ .form-reveal-if-valid.slave,
+input[type="radio"]:checked ~ .form-reveal-if-active.slave,
+input[type="checkbox"]:checked ~ .form-reveal-if-active.slave {
+  width:48%;
+  opacity: 1;
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
+  transition: 0.5s;
+  transition-delay:.1s;
+  float: right;
+  background-color: yellow;
+  position: relative;
+}
+label.form-reveal-if-valid {
+  width:30%;
+  float: left;
+}
+.incidents {
+  --bg-color: rgba(255,216,97, 0.5);
+  --bg-color-light: rgba(255,238,186, 0.5);
+  --box-shadow-color: rgba(255, 215, 97, 0.48);
+  --box-darkShadow-color: rgba(205, 165, 47, 0.48);
+}
+
+.partners {
+  --bg-color: rgba(184,249,211, 0.5);
+  --bg-color-light:rgba(226,252,237, 0.5);
+  --box-shadow-color: rgba(184, 249, 211, 0.48);
+  --box-darkShadow-color: rgba(134, 199, 161, 0.48);
+}
+
+.performance {
+  --bg-color: rgba(206,178,252, 0.5);
+  --bg-color-light: rgba(240,231,255, 0.5);
+  --box-shadow-color: rgba(206, 178, 252, 0.48);
+  --box-darkShadow-color: rgba(205, 128, 202, 0.48);
+}
+
+.C-M-S {
+  --bg-color: rgba(220,233,255, 0.5);
+  --bg-color-light: rgba(241,247,255, 0.5);
+  --box-shadow-color: rgba(220, 233, 255, 0.48);
+  --box-darkShadow-color: rgba(170, 165, 205, 0.48);
+}
+.parallax {
+  height: 100%;
+  width:100%;
+  overflow-x: hidden;
+    overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.parallaxBack {
+  float: left;
+  width:100%;
+  /* top:0; */
+  margin-top: -55%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateZ(-2px)  scale(6);
+  transform: translateZ(-2px) scale(6);
+  z-index: -3;
+}
+#headerPanel {
+  position: relative;
+  clear:both;
+}
+#headerBGImage{
+  width:100%;
+  position: absolute;
+  opacity:0.6;
+}
+
+/*
+#headerPanel {
+  perspective: 1px;
+  position: absolute;
+
+}
+
+#headerBG {
+  /*background-image: url('indiana-card.jpg');*/
+
+
+    /*perspective: 1px;*/
+    /*top:-30%;*/
+    /*min-height: 600px;*/
+    /*margin-top: -30%;*/
+/*
+    max-width: 100%;
+    height:100%;
+    z-index: -2;
+    transform: translateZ(-1px) scale(2) ;
+    overflow: hidden;
+    opacity: 0.6;
+
+}*/
+.blur {-webkit-filter: blur(3px);filter: blur(3px);}
+.card {
+  margin-left:10px;
+  margin-top:10px;
+  width: 150px;
+  height: 60px;
+  background: #fff;
+  --text-color-hover: #44F;
+  border-radius: 0px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0,0,0,.1);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  z-index:1001;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 24px 36px rgba(0,0,0,.51),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.card:hover .overlay {
+  transform: scale(2.5) translateZ(0);
+}
+
+.card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+
+.card:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+.card:hover p {
+  color: var(--text-color-hover);
+}
+
+.card:active {
+  transform: scale(1) translateZ(0);
+  transition: all .1s ease;
+  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card p {
+  align-items: center;
+  font-size: 1.2em;
+  color: #4C5656;
+  bottom: 0px;
+  z-index: 200;
+  transition: color 0.3s ease-out;
+  position: absolute;
+  font-family: "Helvetica";
+  text-align: center;
+}
+p.active {
+  font-weight: bold;
+}
+.tab > div{  /* speaks to the tab boxes*/
+  /*background: var(--bg-color-light);*/
+
+  background-image: linear-gradient(white, var(--bg-color)); /* Standard syntax (must be last) */
+  border-radius: 12px;
+  border: 2px solid var(--bg-color);
+
+  align-items:center;
+  margin:auto;
+  overflow: visible;
+  display: flex;
+  flex-flow: wrap;
+}
+.middleContent {
+  padding:10px;
+  float: left;
+  width:68%;
+  clear: both;
+  position: relative;
+}
+
+.translucentBox {
+    margin: 2px;
+    border: 1px solid red;
+    border-radius: 12px;
+    background-color: rgba(255, 221, 221,0.5);
+}
+
+.tabButtons {
+  position:relative;
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  width:100%;
+}
+
+.pushBack {
+  transform: scale(1.1) translateZ(-0.1px);
+}
+
+.pullForwards {
+  transform: scale(0.9) translateZ(0.1px) translateX(20px);
+}
+
+.tab p {
+  padding: 20px;
+}
+
+.tabButtons .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display:none;
+
+}
+
+.tabButtons input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+
+.tabButtons input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+.tabInnerButton {
+  border-radius: 10px;
+  border:1px solid var(--bg-color-light);
+  background: var(--bg-color);
+  /*#ffecec;*/
+  width:100px;
+  height:80px;
+  margin: 20px;
+  margin-top: 12px;
+  transition: .25s ease;
+  cursor: pointer;
+  float: left;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  font-family: "Candara";
+}
+.tabInnerButton:hover{
+  box-shadow: 0 0 20px var(--bg-color), 0 0 12px black;
+  transition: .3s ease;
+  transform: scale(1.08);
+}
+.tabInnerButton p{
+  padding: 3px;
+}
+
+#latestAdditions{
+float:left;
+width:100%;
+}
+#latestAdditions > div{
+  margin:10px;
+  float: left;
+}
+
+/*
+.tabInnerButton p {
+/*  float:left;
+  text-align: center;
+  /*line-height:30px;
+  /*align-items: center;
+  font-size:1em;
+  width:100%;
+  height:100%;
+}
+*/
+
+
+.circle {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: #FFF;
+  border: 2px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+  top: var(--circle-position-top);
+  left: var(--circle-position-left);
+}
+
+.circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  transition: opacity 0.3s ease-out;
+}
+
+.circle svg {
+  z-index: 100;
+  transform: translateZ(0);
+}
+
+.gc {
+  width:70%;
+  float:left;
+}
+
+.overlay {
+  width: 118px;
+  position: absolute;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+  top: var(--circle-position-top);
+  left: var(--circle-position-left);
+}
+
+ul.nacc li {
+ opacity: 0;
+ display:none;
+ transform: translateX(50px);
+ /*position: absolute;*/
+ list-style: none;
+ transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.nacc li.active {
+ z-index: 2;
+ opacity: 1;
+ display:block;
+ transform: translateX(0px);
+ transition: all 1s;
+}
+
+ul {
+  /*border: 1px solid #ddd;*/
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.trendingThumb {
+  height:90px;
+  float:left;
+}
+
+#trendingItemList li {
+  margin-bottom: 10px;
+  height:auto;
+  border-radius: 12px;
+  align-items: center;
+  background-color: rgba(246,246,246,.5); /* Add a grey background color */
+  padding: 5px; /* Add some padding */
+  transition: background-color 0.3s ease-out;
+  overflow: auto;
+}
+
+#trendingListDiv {
+  position: relative;
+  float: right;
+  width: 29%;
+  padding-left: 5px;
+}
+
+#trendingItemList li:hover {
+  /*border: 1px solid #ddd; /* Add a thin border to each list item */
+  transform: scale(1.05) translateZ(0.0px);
+  background-color: #CCf; /* Add a grey background color */
+  /*padding: 12px; /* Add some padding */
+  transition: all 0.3s ease-out;
+  font-style: bold;
+  cursor: pointer;
+}
+.hoverTable li {
+  /*border: 1px solid #ddd; /* Add a thin border to each list item*/
+}
+
+
+/*This is the new search form */
+
+
+/*
+* The r-text-field component
+*/
+
+/*
+The component will reset input browser styles
+*/
+
+.r-text-field{
+  --uiTextFieldPlaceholderColor: var(--textFieldPlaceholderColor);
+
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border-radius: 0;
+  border-style: solid;
+}
+
+.r-text-field::-webkit-input-placeholder{
+  color: var(--uiTextFieldPlaceholderColor);
+}
+
+.r-text-field::-moz-placeholder{
+  opacity: 1;
+  color: var(--uiTextFieldPlaceholderColor);
+}
+
+.r-text-field:invalid{
+  outline: none;
+  box-shadow: none;
+}
+
+/*
+* The r-button component
+*/
+
+/*
+The component will reset button browser styles
+*/
+
+.r-button{
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Remove the inner border and padding in Firefox. */
+
+.r-button::-moz-focus-inner,
+.r-button[type="button"]::-moz-focus-inner,
+.r-button[type="reset"]::-moz-focus-inner,
+.r-button[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+
+/*
+* The a-field component
+*/
+
+/*
+ 1. The --aFieldHeight option defines an input height. And this option is needed for calculations of a hint final position
+ 2. The --aFieldHintFinalCoordinate option defines calculations of the final Y-axis coordinate
+ 3. The —aFieldPaddingLeft option defines left indent for a hint and query text
+*/
+
+.a-field{
+  --uiaFieldHeight: var(--aFieldHeight);
+  --uiaFieldHintFinalCoordinate: var(--aFieldHintFinalCoordinate, var(--uiaFieldHeight));
+  --uiaFieldPaddingLeft: var(--aFieldPaddingLeft);
+
+  position: relative;
+  padding-top: calc(var(--uiaFieldHintFinalCoordinate) - var(--uiaFieldHeight)); /* 1, 2 */
+}
+
+.a-field__input{
+  box-sizing: border-box;
+  height: var(--uiaFieldHeight); /* 1 */
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: var(--uiaFieldPaddingLeft); /* 3 */
+}
+
+.a-field__input::-webkit-input-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field__input::-moz-placeholder{
+  opacity: 0;
+}
+
+.a-field__input:focus::-webkit-input-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.a-field__input:hover::-webkit-input-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.a-field__input:focus::-moz-placeholder{
+  opacity: 1;
+}
+
+.a-field__input:hover::-moz-placeholder{
+  opacity: 1;
+}
+
+.a-field__label-wrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--uiaFieldHeight);	/* 1 */
+
+  pointer-events: none;
+  cursor: text;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.a-field__label {
+  position: absolute;
+  left: var(--uiaFieldPaddingLeft); /* 3 */
+  bottom: calc(50% - 2em);
+  line-height: 1;
+  pointer-events: none;
+  font-family:"Candara";
+  font-size: 1.2em;
+  color:#DDD;
+}
+
+/*
+  I needed to create an animation onle Chromium broswers because:
+  1. Firefox doesn't support a placeholder animation
+  2. I couldn't make an correct animation at Edge
+*/
+
+@supports (-webkit-appearance: none){
+
+  .a-field__label{
+    transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+    will-change: bottom, opacity;
+  }
+}
+
+/* If a user had inserted a text of query a hint will be hidden */
+
+.a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
+  opacity: 0;
+  bottom: 85%;
+}
+
+/* If the HOVER point is a field a hint will be displayed */
+
+.a-field__input:hover ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--uiaFieldHintFinalCoordinate); /* 2 */
+}
+
+/* If the focal point is a field a hint will be displayed */
+
+.a-field__input:focus ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--uiaFieldHintFinalCoordinate); /* 2 */
+}
+
+/*
+* the search component
+*/
+
+.search{
+  --searchFieldHeight: 50px;
+  --searchButtonSize: var(--searchFieldHeight);
+  --textFieldPlaceholderColor: #fff;
+
+  --aFieldHeight: var(--searchFieldHeight);
+  /* The 10px value has been calculated for this demo and you can change it */
+  --aFieldHintFinalCoordinate: calc(var(--searchFieldHeight) + 40px);
+  --aFieldPaddingLeft: 30px;
+float:right;
+  color: #fff;
+  position: relative;
+}
+
+/*
+ 1. I needed to set the currentColor value for correct displaying a border on iOS devices
+*/
+
+.search__input{
+  width: 100%;
+  border-width: 3px;
+  border-color: currentColor; /* 1 */
+
+  border-radius: 25px;
+  background-color: transparent;
+
+  font-size: 18px;
+  color: currentColor;
+}
+
+.search__input:focus{
+  outline: none;
+}
+
+.search__hint{
+  font-size: 16px;
+}
+
+.search__button{
+  color: currentColor;
+}
+
+.search__button:focus{
+  outline: none;
+}
+
+.search__clear{
+  width: 1em;
+  height: 1em;
+  font-size: var(--searchButtonSize);
+
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+/* If a user starts typing a clearing button will be displayed */
+
+.search__input:not(:placeholder-shown) ~ .search__clear{
+  display: block;
+}
+
+/* If the focal point is a clearing button the hint will be displayed */
+
+.search__clear:focus ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--aFieldHintFinalCoordinate);
+}
+
+.search__clear-label{
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.search__icon{
+  fill: currentColor;
+  display: block;
+
+  box-sizing: border-box;
+  width: 1.5em;
+  height: 1.5em;
+  padding: .25em;
+
+  position: absolute;
+  top: calc(50% - .75em);
+  left: calc(50% - .75em);
+}
+
+.search__button:focus .search__icon{
+  box-shadow: 0 0 0 3px currentColor;
+}
+
+.search__icon-clear{
+  font-size: 18px;
+}
+
+@media (max-width: 640px){
+
+  .search__input{
+    padding-right: 50px;
+  }
+
+  .search__clear{
+    right: 10px;
+  }
+
+  .search__submit{
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #5f27cd;
+    border-radius: 25px;
+    margin-top: 25px;
+  }
+
+  .search__submit:focus{
+    box-shadow: 0 0 0 3px currentColor;
+    color: #422380;
+  }
+
+  .search__icon-search{
+    display: none;
+  }
+}
+
+@media (min-width: 641px){
+
+  .search__input{
+    padding-right: 115px;
+  }
+
+  .search__clear{
+    right: var(--searchButtonSize);
+  }
+
+  .search__submit{
+    width: 1em;
+    height: 1em;
+    font-size: var(--searchButtonSize);
+
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+
+  .search__submit-label{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  .search__icon-search{
+    font-size: 22px;
+  }
+}
+.fsSubmitButton
+{
+padding: 10px 15px 11px !important;
+font-size: 18px !important;
+background-color: #57d6c7;
+font-weight: bold;
+text-shadow: 1px 1px #57D6C7;
+color: #ffffff;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 1px solid #57D6C7;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+width: 50%;
+}
