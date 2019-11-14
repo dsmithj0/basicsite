@@ -641,7 +641,7 @@ The component will reset button browser styles
 .a-field__label {
   position: absolute;
   left: var(--uiaFieldPaddingLeft); /* 3 */
-  bottom: calc(50% - 2em);
+  bottom: calc(50% - 3em);
   line-height: 1;
   pointer-events: none;
   font-family:"Candara";
@@ -695,7 +695,7 @@ The component will reset button browser styles
 
   --aFieldHeight: var(--searchFieldHeight);
   /* The 10px value has been calculated for this demo and you can change it */
-  --aFieldHintFinalCoordinate: calc(var(--searchFieldHeight) + 50px);
+  --aFieldHintFinalCoordinate: calc(var(--searchFieldHeight) + 10px);
   --aFieldPaddingLeft: 30px;
 float:right;
   color: #fff;
