@@ -695,7 +695,7 @@ The component will reset button browser styles
 
   --aFieldHeight: var(--searchFieldHeight);
   /* The 10px value has been calculated for this demo and you can change it */
-  --aFieldHintFinalCoordinate: calc(var(--searchFieldHeight) - 20px);
+  --aFieldHintFinalCoordinate: calc(var(--searchFieldHeight) - 50px);
   --aFieldPaddingLeft: 30px;
 float:right;
   color: #fff;
